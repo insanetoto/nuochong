@@ -43,10 +43,18 @@ spring:
             hibernate.generate_statistics: true
             hibernate.cache.region.factory_class: io.github.jhipster.config.jcache.NoDefaultJCacheRegionFactory
     mail:
-        host: localhost
-        port: 25
-        username:
-        password:
+        host: smtp-mail.outlook.com
+        port: 587
+        username: nuochong2017@outlook.com
+        password: Nuochong_2017
+        protocol: smtp
+        tls: true
+        auth: true
+        from: nuochong2017@outlook.com
+        properties.mail.smtp:
+            auth: true
+            starttls.enable: true
+            ssl.trust: smtp-mail.outlook.com
     messages:
         cache-seconds: 1
     thymeleaf:
@@ -93,7 +101,7 @@ jhipster:
             # security key (this key should be unique for your application, and kept secret)
             key: d11212fc3b73314fad65b4d0f9d8f183f4eadf86
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: nuochong@localhost
+        from: nuochong2017@outlook.com
         base-url: http://127.0.0.1:8080
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
